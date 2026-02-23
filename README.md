@@ -45,7 +45,7 @@
 
 ```bash
 git clone https://github.com/sakawatkabir13/basilisk-shell
-cd basiliskshell
+cd basilisk-shell
 ```
 
 ### 2. Run the setup script
