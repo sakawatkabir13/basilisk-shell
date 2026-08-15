@@ -12,25 +12,43 @@
 
 <p align="center">
   <a href="https://github.com/sakawatkabir13/basilisk-shell/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/sakawatkabir13/basilisk-shell?style=for-the-badge&color=blue" alt="License"/>
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT"/>
   </a>
   <a href="https://github.com/sakawatkabir13/basilisk-shell/stargazers">
-    <img src="https://img.shields.io/github/stars/sakawatkabir13/basilisk-shell?style=for-the-badge" alt="Stars"/>
+    <img src="https://img.shields.io/github/stars/sakawatkabir13/basilisk-shell?style=for-the-badge&logo=github&logoColor=white" alt="Stars"/>
   </a>
   <a href="https://github.com/sakawatkabir13/basilisk-shell/network/members">
-    <img src="https://img.shields.io/github/forks/sakawatkabir13/basilisk-shell?style=for-the-badge" alt="Forks"/>
+    <img src="https://img.shields.io/github/forks/sakawatkabir13/basilisk-shell?style=for-the-badge&logo=github&logoColor=white" alt="Forks"/>
   </a>
   <a href="https://github.com/sakawatkabir13/basilisk-shell/issues">
-    <img src="https://img.shields.io/github/issues/sakawatkabir13/basilisk-shell?style=for-the-badge" alt="Issues"/>
+    <img src="https://img.shields.io/github/issues/sakawatkabir13/basilisk-shell?style=for-the-badge&logo=github&logoColor=white" alt="Issues"/>
   </a>
   <a href="https://github.com/sakawatkabir13/basilisk-shell/commits/main">
-    <img src="https://img.shields.io/github/last-commit/sakawatkabir13/basilisk-shell?style=for-the-badge" alt="Last commit"/>
+    <img src="https://img.shields.io/github/last-commit/sakawatkabir13/basilisk-shell?style=for-the-badge&logo=git&logoColor=white" alt="Last commit"/>
+  </a>
+  <a href="https://github.com/sakawatkabir13/basilisk-shell/releases">
+    <img src="https://img.shields.io/github/v/release/sakawatkabir13/basilisk-shell?style=for-the-badge&logo=github&logoColor=white" alt="Release"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://www.gnu.org/software/bash/">
+    <img src="https://img.shields.io/badge/Bash-5-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash 5"/>
   </a>
   <a href="https://www.python.org/">
-    <img src="https://img.shields.io/badge/python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.10+"/>
+    <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.10+"/>
   </a>
   <a href="https://groq.com/">
-    <img src="https://img.shields.io/badge/Groq-Llama%203.3%2070B-F55036?style=for-the-badge" alt="Groq Llama 3.3 70B"/>
+    <img src="https://img.shields.io/badge/Groq-Llama_3.3_70B-F55036?style=for-the-badge&logo=groq&logoColor=white" alt="Groq Llama 3.3 70B"/>
+  </a>
+  <a href="https://dotenv.org/">
+    <img src="https://img.shields.io/badge/python--dotenv-1.0+-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black" alt="python-dotenv"/>
+  </a>
+  <a href="https://github.com/sakawatkabir13/basilisk-shell/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/Platform-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Platform: Linux"/>
+  </a>
+  <a href="./Dockerfile">
+    <img src="https://img.shields.io/badge/Security-3_Layer_Defense-2EA043?style=for-the-badge&logo=shield&logoColor=white" alt="3-Layer Security"/>
   </a>
 </p>
 
