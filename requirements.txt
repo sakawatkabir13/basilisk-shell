@@ -1,0 +1,6 @@
+# BasiliskShell — Python dependencies
+# Install manually with:  pip install -r requirements.txt
+# (The bundled `initial_setup.py` installs these into ./venv automatically.)
+
+groq>=0.11.0
+python-dotenv>=1.0.1

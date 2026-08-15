@@ -1,12 +1,80 @@
+<div align="center">
+
 # 🐍 BasiliskShell
 
-**AI-Powered Linux Terminal Assistant** — a custom shell with built-in AI that translates natural language into safe, audited Bash commands.
+**AI-Powered Linux Terminal Assistant** — a custom interactive shell with a built-in AI that translates natural language into safe, audited Bash commands.
 
 > Powered by **Groq Cloud** running **Llama 3.3 70B**
 
 <p align="center">
-  <img src="assets/basilisk_banner.png" alt="BasiliskShell Banner" width="700"/>
+  <img src="assets/basilisk_banner.png" alt="BasiliskShell Banner" width="720"/>
 </p>
+
+<p align="center">
+  <a href="https://github.com/sakawatkabir13/basilisk-shell/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/sakawatkabir13/basilisk-shell?style=for-the-badge&color=blue" alt="License"/>
+  </a>
+  <a href="https://github.com/sakawatkabir13/basilisk-shell/stargazers">
+    <img src="https://img.shields.io/github/stars/sakawatkabir13/basilisk-shell?style=for-the-badge" alt="Stars"/>
+  </a>
+  <a href="https://github.com/sakawatkabir13/basilisk-shell/network/members">
+    <img src="https://img.shields.io/github/forks/sakawatkabir13/basilisk-shell?style=for-the-badge" alt="Forks"/>
+  </a>
+  <a href="https://github.com/sakawatkabir13/basilisk-shell/issues">
+    <img src="https://img.shields.io/github/issues/sakawatkabir13/basilisk-shell?style=for-the-badge" alt="Issues"/>
+  </a>
+  <a href="https://github.com/sakawatkabir13/basilisk-shell/commits/main">
+    <img src="https://img.shields.io/github/last-commit/sakawatkabir13/basilisk-shell?style=for-the-badge" alt="Last commit"/>
+  </a>
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.10+"/>
+  </a>
+  <a href="https://groq.com/">
+    <img src="https://img.shields.io/badge/Groq-Llama%203.3%2070B-F55036?style=for-the-badge" alt="Groq Llama 3.3 70B"/>
+  </a>
+</p>
+
+</div>
+
+---
+
+## 📑 Table of Contents
+
+- [✨ Features](#-features)
+- [🎬 Demo](#-demo)
+- [⚡ Quick Start](#-quick-start)
+- [🚀 Usage](#-usage)
+- [🛠️ Tech Stack](#%EF%B8%8F-tech-stack)
+- [📁 Project Structure](#-project-structure)
+- [⚙️ Configuration](#%EF%B8%8F-configuration)
+- [🛡️ Security Architecture](#%EF%B8%8F-security-architecture)
+- [📝 Logging](#-logging)
+- [🗺️ Roadmap](#%EF%B8%8F-roadmap)
+- [🤝 Contributing](#-contributing)
+- [🔐 Security](#-security)
+- [📜 License](#-license)
+- [👤 Author](#-author)
+- [🙏 Acknowledgements](#-acknowledgements)
+
+---
+
+## ✨ Features
+
+| | Feature | Description |
+|---|---|---|
+| 🐍 | **Custom Bash Shell** | Full interactive shell with login, command history, and a themed prompt. |
+| 🤖 | **AI Command Generation** | Describe tasks in plain English — get accurate Bash commands from Llama 3.3 70B. |
+| 🌐 | **Multilingual Input** | Bengali, Hindi, Arabic, Spanish, Urdu and more — AI always replies in English. |
+| 🛡️ | **3-Layer Security** | JSON validation → static blocklist → sandboxed execution. |
+| 📖 | **AI Explanations** | `explain <command>` for beginner-friendly breakdowns of any Linux concept. |
+| 📊 | **System Monitor** | `system` and `system live` for instant and live resource monitoring. |
+| 🔐 | **User Authentication** | Password-protected login with SHA-256 hashing. |
+| 📝 | **Command Logging** | Every AI command is logged with timestamp, risk level, and exit status. |
+| ⚙️ | **One-Shot Installer** | `initial_setup.py` creates venv, installs deps, and adds a global `basilisk` symlink. |
+
+---
+
+## 🎬 Demo
 
 ```
 ⚔ [basilisk@user]─[/home/user]
@@ -24,27 +92,12 @@
 
 ---
 
-## Features
-
-| Feature | Description |
-|---------|-------------|
-| 🐍 **Custom Bash Shell** | Full interactive shell with login system, command history, and custom prompt |
-| 🤖 **AI Command Generation** | Describe tasks in plain English (or Bangla, Hindi, Arabic, Spanish…) — get accurate Bash commands |
-| 🛡️ **3-Layer Security** | AI validation → static blocklist audit → sandboxed execution |
-| 📖 **AI Explanations** | Type `explain <command>` to get beginner-friendly breakdowns of any Linux concept |
-| 📊 **System Monitor** | Built-in `system` and `system live` commands for real-time resource monitoring |
-| 🔐 **User Authentication** | Password-protected login with SHA-256 hashing |
-| 📝 **Command Logging** | All AI-generated commands are logged with timestamps, risk levels, and execution status |
-| 🌍 **Multilingual Input** | AI understands requests in multiple languages and always responds in English |
-
----
-
-## Quick Start
+## ⚡ Quick Start
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/sakawatkabir13/basilisk-shell
+git clone https://github.com/sakawatkabir13/basilisk-shell.git
 cd basilisk-shell
 ```
 
@@ -55,8 +108,8 @@ python3 initial_setup.py
 ```
 
 This will:
-- Update system packages
-- Create a Python virtual environment
+- Update system packages via `apt`
+- Create a Python virtual environment in `./venv`
 - Install required Python packages (`groq`, `python-dotenv`)
 - Generate `run.sh` (venv activator + launcher)
 - Set executable permissions on scripts
@@ -69,18 +122,18 @@ basilisk
 ```
 
 On first launch, you'll be prompted to:
-1. Create a username and password
-2. Enter your **Groq API key** (saved to `.env` automatically)
+1. **Create a username and password**
+2. **Enter your Groq API key** (saved to `.env` automatically)
 
-> Get a free API key at [console.groq.com](https://console.groq.com)
+> 🔑 Get a free API key at [console.groq.com](https://console.groq.com)
 
 ---
 
-## Usage
+## 🚀 Usage
 
 ### Shell Commands
 
-Once inside BasiliskShell, you get a full interactive shell:
+Once inside BasiliskShell you get a fully interactive shell:
 
 ```
 ⚔ [basilisk@user]─[~/projects]
@@ -93,18 +146,18 @@ Once inside BasiliskShell, you get a full interactive shell:
 ### Built-in Commands
 
 | Command | Description |
-|---------|-------------|
-| `help` | Show the command center menu |
+|---|---|
+| `help` | Show the command-center menu |
 | `system` | Display CPU, memory, disk usage, and top process |
-| `system live` | Live-updating system monitor (refreshes every 2s) |
-| `aibasilisk` | Launch the AI assistant (also: `ai`, `aishell`, `basiliskai`) |
+| `system live` | Live-updating system monitor (refreshes every 2 s) |
+| `aibasilisk` | Launch the AI assistant (aliases: `ai`, `aishell`, `basiliskai`) |
 | `history` | Show command history |
 | `clear` | Clear the screen |
 | `exit` | Exit BasiliskShell |
 
 ### AI Assistant
 
-Once inside the AI assistant (`aibasilisk`), describe what you want:
+Once inside the AI assistant (`aibasilisk`), describe what you want in plain English:
 
 ```
   > find all log files larger than 100MB
@@ -113,7 +166,7 @@ Once inside the AI assistant (`aibasilisk`), describe what you want:
   > show disk space on all mount points
 ```
 
-#### Explain Mode
+### Explain Mode
 
 Ask the AI to explain any command or concept:
 
@@ -124,56 +177,87 @@ Ask the AI to explain any command or concept:
   > describe systemctl
 ```
 
-#### Multilingual Support
+### Multilingual Support
 
-The AI understands requests in many languages:
+The AI understands requests in many languages and **always replies in English**:
 
 ```
-  > বিস্তারিত সহ সমস্ত ফাইল দেখান        (Bangla)
+  > বিস্তারিত সহ সমস্ত ফাইল দেখান        (Bengali)
   > mostrar todos los archivos ocultos   (Spanish)
   > عرض استخدام القرص                     (Arabic)
 ```
 
-#### AI Assistant Controls
+### AI Assistant Controls
 
 | Input | Action |
-|-------|--------|
+|---|---|
 | `exit` / `quit` / `q` | Exit the AI assistant |
-| `/history` | View AI command log |
+| `/history` | View the AI command log |
 | `#comment` | Ignored (comment line) |
 
 ---
 
-## Project Structure
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Shell | Bash 4+ |
+| AI Bridge | Python 3.10+ |
+| LLM Provider | [Groq Cloud](https://groq.com/) |
+| Model | `llama-3.3-70b-versatile` |
+| Python libs | [`groq`](https://pypi.org/project/groq/), [`python-dotenv`](https://pypi.org/project/python-dotenv/) |
+| Execution safety | `subprocess.run(shell=False)` + `shlex` + 30 s timeout |
+
+---
+
+## 📁 Project Structure
 
 ```
-basiliskshell/
+basilisk-shell/
 ├── assets/
-│   └── basilisk_banner.png   # Terminal screenshot for README
-├── initial_setup.py           # Automated setup script (venv, packages, symlink)
-├── basilisk.sh                # Main shell — login, prompt, built-in commands
-├── basilisk_ai_setup.py       # AI assistant — command generation, explanations
-├── run.sh                     # Auto-generated venv activator + launcher
-├── .env                       # Auto-generated API key storage (gitignored)
-├── basilisk_cmd_history.log   # AI command execution log
-└── README.md                  # This file
+│   └── basilisk_banner.png     # Terminal screenshot for README
+├── initial_setup.py            # One-shot installer (venv, deps, symlink)
+├── basilisk.sh                 # Main shell — login, prompt, built-ins
+├── basilisk_ai_setup.py        # AI assistant — generation, audit, execution
+├── requirements.txt            # Python dependencies (groq, python-dotenv)
+├── .env.example                # Template for GROQ_API_KEY
+├── .gitignore                  # Ignores secrets, venv, logs, run.sh
+├── LICENSE                     # MIT
+├── CHANGELOG.md                # Version history
+├── CONTRIBUTING.md             # How to contribute
+├── SECURITY.md                 # Vulnerability reporting policy
+└── README.md                   # This file
+```
+
+Auto-generated at runtime (and gitignored):
+
+```
+venv/                          # Python virtual environment
+run.sh                         # venv activator + launcher (generated by setup)
+basilisk_cmd_history.log       # AI command log
+~/.basilisk_user / _pass       # local credentials
 ```
 
 ---
 
-## Configuration (`.env`)
+## ⚙️ Configuration
 
-Created automatically on first run. You can also edit manually:
+`.env` is created automatically on first run. To configure manually:
+
+```bash
+cp .env.example .env
+# then edit .env
+```
 
 ```env
-GROQ_API_KEY=paste_your_api_key_here
+GROQ_API_KEY=your_groq_api_key_here
 ```
 
 | Variable | Description |
-|----------|-------------|
-| `GROQ_API_KEY` | Your Groq Cloud API key ([get one here](https://console.groq.com)) |
+|---|---|
+| `GROQ_API_KEY` | Your Groq Cloud API key — [get one here](https://console.groq.com) |
 
-The AI uses **Llama 3.3 70B Versatile** via Groq at `temperature=0.2` for consistent, accurate results.
+The AI uses **Llama 3.3 70B Versatile** via Groq at `temperature=0.2` for consistent, deterministic results.
 
 ---
 
@@ -202,7 +286,7 @@ Every generated command passes through `security_audit()` before display or exec
 **Hard Block List** — commands containing these patterns are unconditionally refused:
 
 | Pattern | Reason |
-|---------|--------|
+|---|---|
 | `rm -rf /` | Deletes entire filesystem |
 | `mkfs` | Formats/destroys a disk partition |
 | `dd if=` | Raw disk write — can destroy data |
@@ -215,7 +299,7 @@ Every generated command passes through `security_audit()` before display or exec
 **Escalation Patterns** — presence of these **upgrades the risk level to HIGH**:
 
 | Pattern | Reason |
-|---------|--------|
+|---|---|
 | `sudo` | Requests elevated privileges |
 | `*` or `?` | Wildcards can match unintended files |
 | `;`, `&&`, `\|\|` | Command chaining can execute unintended commands |
@@ -235,7 +319,7 @@ subprocess.run(
 ### Confirmation Gates
 
 | Risk Level | Confirmation Required |
-|------------|----------------------|
+|---|---|
 | `low` | `y` / `yes` |
 | `medium` | `y` / `yes` |
 | `high` | Must type exactly `YES` |
@@ -243,7 +327,7 @@ subprocess.run(
 
 ---
 
-## Logging
+## 📝 Logging
 
 All AI-generated commands are logged to `basilisk_cmd_history.log`:
 
@@ -257,18 +341,49 @@ View the log anytime with `/history` inside the AI assistant.
 
 ---
 
-## Dependencies
+## 🗺️ Roadmap
 
-| Package | Purpose |
-|---------|---------|
-| `groq` | Groq Cloud API client (Llama 3.3 70B) |
-| `python-dotenv` | `.env` file loading |
+- [x] Custom interactive shell with login
+- [x] AI command generation (Groq + Llama 3.3 70B)
+- [x] 3-layer security model
+- [x] Multilingual input
+- [x] System monitor (instant + live)
+- [x] Persistent command log
+- [ ] Per-user theme configuration in `~/.basiliskrc`
+- [ ] Offline command-suggestion fallback when no API key is available
+- [ ] Plugin system for custom built-in commands
+- [ ] TUI dashboard for browsing `basilisk_cmd_history.log`
+- [ ] Internationalised prompts (Bengali, Hindi, Arabic)
+- [ ] Unit tests for `security_audit()` and JSON parsing
 
-**System requirements:**
-- Python ≥ 3.10
-- Bash
-- Debian-based Linux (for `apt` in setup)
-- `sudo` access (for setup symlink)
+See [`CHANGELOG.md`](CHANGELOG.md) for full version history.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! 🐍
+
+1. Fork the repository.
+2. Create a feature branch: `git checkout -b feat/amazing-feature`
+3. Commit your changes: `git commit -m "feat: add amazing feature"`
+4. Push the branch and open a Pull Request.
+
+Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) first — it covers style, security-sensitive areas, and the review process.
+
+---
+
+## 🔐 Security
+
+Found a vulnerability? **Please do not file a public issue.**
+
+Report privately via [GitHub Security Advisories](https://github.com/sakawatkabir13/basilisk-shell/security/advisories/new) — see [`SECURITY.md`](SECURITY.md) for the full policy and response timeline.
+
+---
+
+## 📜 License
+
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for the full text.
 
 ---
 
@@ -276,16 +391,32 @@ View the log anytime with `/history` inside the AI assistant.
 
 **Sakawat Kabir Tanveer**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/s-kbr13)
-[![X (Twitter)](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/tanveer_sakawat)
+<p>
+  <a href="https://www.linkedin.com/in/s-kbr13">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="https://x.com/tanveer_sakawat">
+    <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X (Twitter)"/>
+  </a>
+  <a href="https://github.com/sakawatkabir13">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+</p>
 
 ---
 
-## 📜 License
+## 🙏 Acknowledgements
 
-This project is licensed under the **MIT License**.
+- [Groq Cloud](https://groq.com/) — ultra-fast LLM inference for `Llama 3.3 70B`.
+- [Meta AI](https://ai.meta.com/) — for the underlying `Llama 3.3 70B` model.
+- [Shields.io](https://shields.io/) — for the README badges.
+- Every contributor and early tester — thank you! 🐍
 
 ---
+
+<p align="center">
+  ⭐ If BasiliskShell made your terminal smarter, consider starring the repo!
+</p>
 
 
 

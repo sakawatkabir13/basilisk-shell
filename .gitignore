@@ -1,0 +1,59 @@
+# ──────────────────────────────────────────────────────────────
+# BasiliskShell — gitignore
+# ──────────────────────────────────────────────────────────────
+
+# --- Secrets & environment ---
+.env
+*.env
+!.env.example
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# --- IDE / editor ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- BasiliskShell runtime artefacts ---
+run.sh
+basilisk_cmd_history.log
+# user credentials (created in $HOME by basilisk.sh)
+.basilisk_user
+.basilisk_pass
+.basilisk_history
+
+# --- Logs ---
+*.log
+logs/
+
+# --- OS junk ---
+.DS_Store
+.DS_Store?
+._*
+
+# --- Misc ---
+*.bak
+*.tmp
+*.orig
+node_modules/
